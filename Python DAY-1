@@ -7,3 +7,44 @@ a=int(input("input your Value! : "))
 b=sum_a(a)
 print("1부터 ", a , " 까지의 합을 더한 결과입니다!" , b)
 
+#### if + else + if 사용해보기
+import math 
+def sum_a(a):
+    s=0
+    return a*(a+1)//2 # 이게 가우스 방식이야 n(n+1)/2
+
+a=int(input("input your Value! : "))
+b=sum_a(a)
+if (a<=0):
+    print("멀쩡한 숫자좀 입력해 이 좆간아!!")
+else:
+    if(a>=0):
+        print("1부터 ", a , " 까지의 합을 더한 결과입니다!" , b)
+
+import math 
+def sum_a(a):
+    s=0
+    return a*(a+1)//2 # 이게 가우스 방식이야 n(n+1)/2
+
+#### elif 해보기
+a=int(input("input your Value! : "))
+b=sum_a(a)
+if (a<=0):
+    print("멀쩡한 숫자좀 입력해 이 좆간아!!")
+elif(a>=0):
+    print("1부터 ", a , " 까지의 합을 더한 결과입니다!" , b)
+
+#### 제일 짧게 구성 해보기
+import math 
+def sum_a(a):
+    s=0
+    return a*(a+1)//2 # 이게 가우스 방식이야 n(n+1)/2
+
+
+a=int(input("input your Value! : "))
+if a <=0:
+    print("멈춰!!")
+else:
+    b=sum_a(a)
+    print("1부터 ", a , " 까지의 합을 더한 결과입니다!" , b)
+
