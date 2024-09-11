@@ -1,1 +1,9 @@
+import math 
+def sum_a(a):
+    s=0
+    return a*(a+1)//2 # 이게 가우스 방식이야 n(n+1)/2
+
+a=int(input("input your Value! : "))
+b=sum_a(a)
+print("1부터 ", a , " 까지의 합을 더한 결과입니다!" , b)
 
