@@ -1,0 +1,71 @@
+### Bigdata //  R St // 6-1 TE
+
+
+ggplot 2 Lib # 호출하기
+
+ggplot(data= data_name , aes(xline name =  , yline name=) + geom_col(stick Graph)
+
+# - value를 추가한다면 해당 data의 역순으로 정렬.
+
+## 범주형 자료에 대한 설명.
+1)geomat col 같은 num값일때
+
+2) 빈도 막대 그래프 만들기
+ggplot(...) + geom_bar() //  범주변수(상 중 하) // mpg+dvr hang
+ggplot(...) + geom_bar() //  연속형 (숫자)
+
+if 범주인지 뭔지 모르면 그냥 geom_bar() 떄려박아서 그래프를 일단 뽑는걸로 하단의 코드 
+
+## def r2x
+
+library(ggplot2)
+
+ggplot(data=mpg, aes(x=hwy))+geom_bar() ## data는 mpg라는 값에서 불러온거임
+
+#193p
+
+library(ggplot2)
+
+df<-mpg 
+    filter(class == "suv" ) # df 값 내에서 suv 라는 항목을 걸러낸다.
+    group_by(manufactuer) ## ~ 별로 모은다
+    summarise(mean_cty = mean(cty), 
+    arrange(desc(mean_cty))
+  head(5)
+
+ggplot(data=df, aes(x=reorder(manufactuer, + mean_cty) , y= mean_cty))+geom_col()  
+       
+
+####################
+
+ggplot(data=economics ,  aes(x=date, y=unemploy))+geom_line()## bar 형식으로 사용한다면 에러 
+
+# 왜냐면 해당 Data의 값이 매우 많기 때문에 바 형식으로 표현하기엔 너무 복잡하기 때문이다..
+
+ggplot(data=economics, aes (x=pce , y= pop))+geom_line()
+
+ggplot(data=economics , aes ( x = date ,  y = psavert)) + geom_line() # 시간에 따른 저축률 Grap
+
+## box Grap
+ggplot(data = mpg, aes(x=drv,y=hwy)) + geom_boxplot()
+
+이를 실행시켜보면 자료의 data를 상자 그림으로 표현시켜주는데 box내의 line은 딱 중위값이 되는거야
+그 위의 점 또는 아래의 점은 초과값/미달값 등 값을 출력해주게 되는거다.
+
+편차가 심하다 = box가 크며 중위값 아래로 값이 더 많아
+. . .  은 극단값이 되는거고.
+#####################################################
+#정리
+
+#산점도
+ggplot(data = mpg , aes(x=drv,y=hwy))+geom_point()
+#상자 그래프
+ggplot(data = mpg, aes(x=drv,y=hwy)) + geom_boxplot()
+#선 그래프
+ggplot(data = mpg, aes(x=drv,y=hwy)) + geom_line()
+
+
+ggplot을 사용하여 db에 저장된 데이터값을 꺼내어서 그래프로 그리게 됩니다.
+
+10/21 Mid Test
+       
