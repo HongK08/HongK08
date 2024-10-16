@@ -43,3 +43,24 @@ for i in range(10):
 print(PP(7))
 print(PP(10))
 
+def Hanoi_tower(n)  
+
+def hni(n,n1,n2,n3):
+    global count
+    if n == 1:
+        print.count+1(n1,"->",n2)
+        return
+
+    hni(n-1, n1,n3,n2)
+    print.count+1(n1,"->",n3)
+    hni(n-1, n3,n2,n1)
+
+
+print("n=1")
+hni(1,1,3,2)
+
+print("n=2")
+hni(2,1,3,2)
+
+print("n=3")
+hni(3,1,3,2)
